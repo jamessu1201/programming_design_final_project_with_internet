@@ -8,6 +8,7 @@ from discord.ext import commands
 import json
 from discord.ext.commands.core import has_guild_permissions
 from discord.utils import get
+import keep_alive
 
 
 prefix_json="json/prefix.json"    #prefix.json path
@@ -91,6 +92,7 @@ def main():
     bot.run(token)
     
 
-if(__name__=='__main__'):         
+if(__name__=='__main__'):
+    keep_alive.keep_alive()
     main()
     
